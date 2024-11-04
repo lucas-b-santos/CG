@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritmo Fillpoly</title>
+
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <style>
+        canvas {
+            border: 1px solid black;
+  
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid d-flex justify-content-around gap-3 vh-100">
+
+        <div class="d-flex flex-column justify-content-center align-items-center">
+            <h3>Viewport 600 x 300</h3>
+            <canvas id="viewport" width="1200" height="600"></canvas>
+        </div>
+
+        <div class="d-flex flex-column w-100 justify-content-center align-items-center gap-1">
+
+            <ul>
+                <li>A cor selecionada será usada para pintar o polígono</li>
+                <li>Aperte em Pintar/Excluir, e depois selecione o polígono clicando sobre ele</li>
+                <li>Para cancelar seleção, clique em um lugar livre na viewport</li>
+            </ul>
+
+            <button type="button" class="btn btn-success w-100" id="btnAdicionarPoligono">Adicionar Polígono</button>
+            <button type="button" class="btn btn-primary w-100" id="btnPintar">Pintar Polígono</button>
+            <button type="button" class="btn btn-warning w-100" id="btnExcluir">Excluir Polígono</button>
+            <button type="button" id="btnLimpar" class="btn btn-danger w-100">Limpar</button>
+
+            <div class="form-check form-switch ">
+                <input class="form-check-input" type="checkbox" role="switch" id="ckboxColorirArestas">
+                <label class="form-check-label" for="flexSwitchCheckDefault">Pintar arestas</label>
+            </div>
+
+            <div class="form-group w-100">
+                <label for="colorPicker">Selecione a cor:</label>
+                <input type="color" id="colorPicker" class="form-control">
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="./dist/bundle.js"></script>
+
+</body>
+
+</html>
